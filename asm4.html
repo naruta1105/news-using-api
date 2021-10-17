@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Load icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="asm04.css">
+    <title>Assignment 4</title>
+</head>
+
+<body>
+    <header>
+        <h1> My News<button id="btnOpenSearch" class="transparentBtn"><i class="fa fa-search"></i></button> </h1>
+    </header>
+    <div id="loading">
+        <img id="loading-image" src="loading.gif" alt="Loading...">
+    </div>
+    <div id="error">
+        <h2>There is something wrong with server. Please try again tomorrows</h2>
+    </div>
+    <div id="searchWindow">
+        <form id="searchForm">
+            <h1> Search New </h1>
+            <div id="searchBar">
+                <i class="fa fa-search"></i>
+                <input id="search" type="text" placeholder="Search...">
+            </div>
+            <div id="searchAdvance">
+                <h2>Advance Search</h2>
+                <div id="selectGroup">
+                    <select id="topicSearch" class="col">
+                        <option value="" disabled selected hidden>Topic</option>
+                    </select>
+                    <select id="langSearch" class="col">
+                        <option value="" disabled selected hidden>Language</option>
+                    </select>
+                    <select id="countrySearch" class="col">
+                        <option value="" disabled selected hidden>Country</option>
+                    </select>
+                </div>
+
+                <div id="timeGroup">
+                    <div class="col">
+                        <label for="start">Start date:</label>
+                        <input type="date" id="start" name="newtime">
+                    </div>
+                    <div class="col">
+                        <label for="end">End date:</label>
+                        <input type="date" id="end" name="newtime">
+                    </div>
+                    <select id="sortSearch" class="col">
+                        <option value="" disabled selected hidden>Sort ...</option>
+                    </select>
+                </div>
+            </div>
+            <div id="btnGroup">
+                <button id="btnSearch" type="submit">Search</button>
+                <button id="btnCancel">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <div id="result-count">Find <span></span> results</div>
+    <main>
+
+    </main>
+    <script language="javascript" type="text/javascript" src="asm04.js"></script>
+</body>
+
+</html>

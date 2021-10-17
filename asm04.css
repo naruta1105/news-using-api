@@ -1,0 +1,387 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s;
+    -webkit-text-fill-color: #000 !important;
+}
+
+@media only screen and (max-width: 767px) {
+    * {
+        --width-page: 100%;
+        --width-search: 280px;
+        --line-height-between-section: 5px;
+        --line-height-search: 10px;
+        --font-size-search: 18px;
+        --height-search: 30px;
+        --left-margin-search: 2%;
+    }
+    #searchBar {
+        height: 30px;
+    }
+    #searchBar>i {
+        font-size: 20px;
+        height: 30px;
+    }
+    #searchBar input {
+        font-size: 20px;
+    }
+    #searchAdvance .col {
+        width: 96%;
+    }
+    #timeGroup label {
+        width: 32%;
+    }
+    #timeGroup input {
+        width: 63%;
+        height: 100%;
+    }
+    article,
+    #result-count {
+        width: 96%;
+        margin: 10px auto 0px;
+    }
+    aside {
+        max-width: 150px;
+        height: 150px;
+    }
+    article h2 {
+        font-size: 15px;
+    }
+    article .datetime {
+        font-size: 10px;
+    }
+    article .content {
+        font-size: 10px;
+    }
+    article .source {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    * {
+        --width-page: 100%;
+        --width-search: 700px;
+        --line-height-search: 20px;
+        --font-size-search: 15px;
+        --height-search: 30px;
+        --left-margin-search: 1%;
+        --line-height-between-section: 10px;
+    }
+    #searchBar {
+        height: 50px;
+    }
+    #searchBar>i {
+        font-size: 35px;
+        height: 100%;
+    }
+    #searchBar input {
+        font-size: 30px;
+    }
+    #searchAdvance .col {
+        width: 31.5%;
+    }
+    #timeGroup label {
+        width: 30%;
+    }
+    #timeGroup input {
+        width: 65%;
+    }
+    article,
+    #result-count {
+        width: 96%;
+        margin: 10px auto 0px;
+    }
+    aside {
+        max-width: 180px;
+        height: 180px;
+    }
+    article h2 {
+        font-size: 18px;
+    }
+    article .datetime {
+        font-size: 12px;
+    }
+    article .content {
+        font-size: 12px;
+    }
+    article .source {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    * {
+        --width-page: 100%;
+        --width-search: 950px;
+        --line-height-search: 20px;
+        --font-size-search: 20px;
+        --height-search: 30px;
+        --left-margin-search: 2%;
+        --height-article: 200px;
+        --line-height-between-section: 10px;
+    }
+    #searchBar {
+        height: 75px;
+    }
+    #searchBar>i {
+        margin-left: 10px;
+        font-size: 40px;
+        height: 70%;
+    }
+    #searchBar input {
+        font-size: 30px;
+    }
+    #searchAdvance .col {
+        width: 30%;
+    }
+    #timeGroup label {
+        width: 29%;
+    }
+    #timeGroup input {
+        width: 67%;
+    }
+    article,
+    #result-count {
+        width: 992px;
+        margin: 10px auto 0px;
+    }
+    aside {
+        max-width: 200px;
+        height: 200px;
+    }
+    article h2 {
+        font-size: 20px;
+    }
+    article .datetime {
+        font-size: 15px;
+    }
+    article .content {
+        font-size: 15px;
+    }
+    article .source {
+        font-size: 15px;
+    }
+}
+
+header {
+    width: var(--width-page, 100%);
+    background-color: aqua;
+    height: fit-content;
+    margin: 0px auto;
+    padding: 5px 0px;
+}
+
+header h1 {
+    text-align: center;
+}
+
+header #btnOpenSearch {
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    font-size: 35px;
+}
+
+.transparentBtn {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+header i {
+    text-align: center;
+}
+
+#loading {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    opacity: 0.7;
+    background-color: #fff;
+    z-index: 99;
+}
+
+#loading-image {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 100;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#error {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 30;
+    text-align: center;
+}
+
+#error h2 {
+    margin: auto;
+    margin-top: 20%;
+    font-size: 40px;
+    color: red;
+}
+
+#searchWindow {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 49;
+}
+
+#searchWindow h1 {
+    text-align: center;
+}
+
+#searchForm {
+    width: var(--width-search, 100%);
+    padding: 10px;
+    border: 5px solid black;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    /*set windown*/
+    position: absolute;
+    z-index: 50;
+    margin: auto;
+    top: 100px;
+    left: 0;
+    right: 0;
+}
+
+#searchBar {
+    width: 100%;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+
+#searchBar>i {
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.1);
+    vertical-align: middle;
+}
+
+#searchBar input {
+    display: inline-block;
+    height: 100%;
+    width: 90%;
+    border-color: transparent;
+    background-color: inherit;
+    outline: transparent;
+}
+
+#searchAdvance {
+    margin-top: 10px;
+    padding-bottom: var(--line-height-search, 20px);
+    border: 2px double green;
+    border-radius: 10px;
+}
+
+#searchAdvance h2 {
+    margin-top: var(--line-height-search, 20px);
+    text-align: justify;
+}
+
+#searchAdvance #selectGroup {
+    margin-top: var(--line-height-search, 20px);
+}
+
+#searchAdvance .col {
+    display: inline-block;
+    margin-left: var(--left-margin-search, 3%);
+    margin-bottom: var(--line-height-search, 0px);
+    height: var(--height-search, 20px);
+}
+
+#searchAdvance select {
+    width: 100%;
+    height: 100%;
+    font-size: var(--font-size-search, 20px);
+    border-radius: 3px;
+}
+
+#timeGroup label {
+    display: inline-block;
+    font-size: var(--font-size-search, 20px);
+}
+
+#timeGroup input {
+    font-size: var(--font-size-search, 20px);
+}
+
+#searchForm #btnGroup {
+    width: fit-content;
+    margin: 10px auto;
+}
+
+#searchForm button {
+    height: var(--height-search, 20px);
+    font-size: var(--font-size-search, 20px);
+    width: 100px;
+}
+
+#result-count {
+    font-size: 25px;
+}
+
+article {
+    display: block;
+    height: fit-content;
+    overflow: hidden;
+}
+
+aside {
+    float: left;
+    margin-right: 20px;
+}
+
+aside img {
+    width: 100%;
+    height: 100%;
+}
+
+article .datetime {
+    display: block;
+    margin-top: var(--line-height-between-section, 10px);
+    font-style: italic;
+}
+
+article .content {
+    display: block;
+    margin-top: var(--line-height-between-section, 10px);
+}
+
+article .source {
+    display: block;
+    margin-top: var(--line-height-between-section, 10px);
+}
+
+.warning {
+    border: 3px solid red;
+}

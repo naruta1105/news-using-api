@@ -1,0 +1,11 @@
+Em dùng 2 API TOKEN để đề phòng trường hợp hết quota
+
+Khi load trang : 
++ Sẽ load Top Headlines về.
++ đưa các option vào <select> để tạo dropdown. Lí do dùng js chứ không xài html là để dễ quản lý giá trị của dropdown.
+
+Khi click vào biểu tượng kính lúp kế bên My News sẽ hiện cửa sổ tìm kiếm:
++ Nhập keyword vào ô Search để tìm kiếm theo keyword (search)
++ Mục Topic nếu được chọn thì sẽ tìm kiếm theo Top Headlines.
++ Cần phải nhập ít nhất 1 mục trong 2 mục trên dropdown.
++ Các mục khác có thể dùng vào để filter cho tìm kiếm.
